@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+h1{
+  font-family: 'Source Code Pro', monospace;
+  font-size: 72px;
+  color : #283747 ;
+}
