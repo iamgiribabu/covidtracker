@@ -24,12 +24,12 @@ class App extends Component {
     })
     .then(response => response.json())
     .then(info => info.response)
-    .then(data => this.setState({covidData : data}) )
+    .then(data => {this.setState({covidData : data}); console.log(data)} )
     .catch(err => {
       console.log(err);
     });
   }
-
+  
   render(){
     const { covidData, searchField } = this.state;
     const filteredCountry = covidData.filter(covidData=> covidData.country.toLowerCase().includes(searchField.toLowerCase()))
@@ -42,9 +42,11 @@ class App extends Component {
          placeholder = 'Country' 
          handleChange = { e => this.setState({ searchField : e.target.value})}
         />
+        
         <CardList covidData = {filteredCountry} />  {/**prop is object of any properties that you write on this component */}
         {/**this is called children, the main properties that exit on props (anything in between barkets of our component)*/}
-        <p>{this.state.country}</p>
+        
+      
       </div>
     )
   }

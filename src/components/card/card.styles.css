@@ -1,6 +1,6 @@
 .card-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: #95dada;
     border: 1px solid grey;
     border-radius: 5px;
@@ -16,7 +16,7 @@
     transform: scale(1.05);
   }
 
-  img{
-    width: 250px;
-    
+  p{
+    margin: 20px;
+    padding-top: 5px;
   }
