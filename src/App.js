@@ -19,12 +19,12 @@ class App extends Component {
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "covid-193.p.rapidapi.com",
-        "x-rapidapi-key": "5bce327a92msh9c0bae3d5c57d80p12ea51jsna7ea9f344aa1"
+        "x-rapidapi-key": process.env.REACT_APP_API_KEY
       }
     })
     .then(response => response.json())
     .then(info => info.response)
-    .then(data => {this.setState({covidData : data}); console.log(data)} )
+    .then(data => {this.setState({covidData : data})} )
     .catch(err => {
       console.log(err);
     });
